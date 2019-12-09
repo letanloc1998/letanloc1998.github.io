@@ -1,0 +1,148 @@
+@media (max-width: 1639px) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1570px) {
+    html {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 1502px) {
+    html {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1434px) {
+    html {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1298px) {
+    html {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 1229px) {
+    html {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1161px) {
+    html {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1093px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 956px) {
+    html {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 888px) {
+    html {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 820px) {
+    html {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 751px) {
+    html {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 683px) {
+    html {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 614px) {
+    html {
+        font-size: 0.45rem;
+    }
+}
+
+@media (max-width: 546px) {
+    html {
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 478px) {
+    html {
+        font-size: 0.35rem;
+    }
+}
+
+@media (max-width: 410px) {
+    html {
+        font-size: 0.3rem;
+    }
+}
+
+@media (max-width: 341px) {
+    html {
+        font-size: 0.25rem;
+    }
+}
+
+@media (max-width: 273px) {
+    html {
+        font-size: 0.2rem;
+    }
+}
+
+body {
+    overflow: auto;
+    padding: 0px !important;
+    margin: 0px !important;
+    box-sizing: border-box !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chrome, Safari, Opera */
+body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Firefox */
+body { overflow: -moz-scrollbars-none; }
+
+/* Internet Explorer */
+body { -ms-overflow-style: none; }
