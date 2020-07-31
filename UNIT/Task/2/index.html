@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gist .highlight {
+            font-size: 16px !important;
+        }
+
+        .gist-meta * {
+            display: none !important;
+        }
+
+        .gist-meta a:first-child {
+            display: block !important;
+        }
+
+        /* Switch Image */
+        .hide p[align="center"] {
+            display: none;
+        }
+
+        p[align="center"] * {
+            border-radius: 16px;
+            box-shadow: 0 0 8px 2px grey;
+        }
+
+        /* Scrollbar */
+
+        /* Chrome, Safari, Opera */
+        * ::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        /* Firefox */
+        * {
+            overflow: -moz-scrollbars-none;
+        }
+
+        /* Internet Explorer */
+        * {
+            -ms-overflow-style: none;
+        }
+
+        .noselect,
+        * {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        .nav-pills .nav-link {
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .nav-link.active:hover,
+        .nav-pills .nav-link.active:focus {
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="hide">
+
+    <div class="container-fluid" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px;">
+
+        <div class="row my-3" style="max-height: 100%; height: 100%;">
+
+            <div class="col-auto">
+
+                <!-- <div class="list-group" id="listScrollspy">
+                    <a href="#createProject" class="list-group-item list-group-item-action active">Create Project</a>
+                    <a href="#configThymeleaf" class="list-group-item list-group-item-action">Config Thymeleaf</a>
+                    <a href="#" class="list-group-item list-group-item-action"></a>
+                    <a href="#" class="list-group-item list-group-item-action"></a>
+                    <a href="#" class="list-group-item list-group-item-action"></a>
+                </div> -->
+
+                <nav id="listScrollspy" class="navbar navbar-light bg-light">
+
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+                    <nav class="nav nav-pills flex-column">
+
+                        <div class="custom-control custom-switch my-2 text-center">
+                            <input onclick="controlImage(this)" type="checkbox" class="custom-control-input"
+                                id="switchImage">
+                            <label class="custom-control-label" for="switchImage"><span
+                                    class="noselect">Image</span></label>
+                        </div>
+
+                        <a class="nav-link" href="#createProject">1. Create Project</a>
+
+                        <a class="nav-link" href="#configThymeleaf">2. Config Thymeleaf</a>
+                        <nav class="nav nav-pills flex-column">
+
+                            <a class="nav-link ml-4 my-1" href="#file-2-1-config-thymeleaf-md">2.1 Views</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-2-2-config-thymeleaf-md" data-toggle="tooltip"
+                                data-placement="right" data-html="true"
+                                data-original-title="Spring Standard Dialect<br>Views and View Resolvers">2.2
+                                Thymeleaf</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-2-3-config-thymeleaf-md">2.3 Controller</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-2-4-config-thymeleaf-md" data-toggle="tooltip"
+                                data-placement="right" data-html="true"
+                                data-original-title="@Controller<br>@RequestMapping">2.4
+                                DispatcherServlet</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-2-5-config-thymeleaf-md">2.5 Run</a>
+
+                        </nav>
+
+                        <a class="nav-link" href="#configSpringDataMirage">3. Spring Data Mirage</a>
+                        <nav class="nav nav-pills flex-column">
+
+                            <a class="nav-link ml-4 my-1" href="#file-3-1-config-spring-data-mirage-md">3.1 Local Repository</a>
+
+                            <a class="nav-link ml-4 my-1" href="#item-3-2">Item 3-2</a>
+                        </nav>
+                    </nav>
+
+                </nav>
+
+
+
+            </div>
+
+            <!-- overflow-auto -->
+            <div class="col h-100" style="overflow-y: scroll;" data-spy="scroll" data-target="#listScrollspy"
+                data-offset="100">
+
+                <div id="createProject">
+                    <script src="https://gist.github.com/letanloc1998/e0b20fdc0aa92bbfc7891782e9a44914.js"></script>
+                </div>
+
+                <div id="configThymeleaf">
+                    <script src="https://gist.github.com/letanloc1998/2ec4ab605a4163968d0631060b85748d.js"></script>
+                </div>
+
+                <div id="configSpringDataMirage">
+                    <script src="https://gist.github.com/letanloc1998/6086d9f89f3e4e2f20868a0a260385ce.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        // $(".list-group .list-group-item").click(function (e) {
+        //     $(".list-group .list-group-item").removeClass("active");
+        //     $(e.target).addClass("active");
+        // });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        function controlImage(showImg) {
+            if (showImg.checked) {
+                document.body.classList.remove('hide');
+            }
+            else {
+                document.body.classList.add('hide');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
