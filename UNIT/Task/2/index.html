@@ -26,6 +26,52 @@
             display: block !important;
         }
 
+        .tooltip::after {
+            content: "";
+            background-color: #ffffff99;
+            /* background-color: #ffff0099; */
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: -8px;
+            right: -8px;
+            width: calc(100% + 16px);
+            height: 100%;
+            /* display: block; */
+            -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px);
+            /* z-index: 0; */
+            border-radius: 8px;
+        }
+
+        /* .tooltip {
+            -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px);
+        } */
+
+        /* .tooltip-inner { */
+        /* background-color: #0000ff99; */
+        /* background-color: #0000ff; */
+        /* color: #ffff00; */
+        /* -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px); */
+        /* z-index: 10 !important; */
+        /* } */
+
+        /* .arrow::before {
+            border-top-color: #0000ff !important; */
+        /* z-index: 10 !important; */
+        /* } */
+
         /* Switch Image */
         .hide p[align="center"] {
             display: none;
@@ -39,23 +85,22 @@
         /* Scrollbar */
 
         /* Chrome, Safari, Opera */
-        * ::-webkit-scrollbar {
+        .overflow-auto::-webkit-scrollbar {
             width: 0 !important;
             height: 0 !important;
         }
 
         /* Firefox */
-        * {
+        .overflow-auto {
             overflow: -moz-scrollbars-none;
         }
 
         /* Internet Explorer */
-        * {
+        .overflow-auto {
             -ms-overflow-style: none;
         }
 
-        .noselect,
-        * {
+        .noselect {
             -webkit-touch-callout: none;
             /* iOS Safari */
             -webkit-user-select: none;
@@ -107,7 +152,7 @@
 
         <div class="row my-3" style="max-height: 100%; height: 100%;">
 
-            <div class="col-auto">
+            <div class="col-auto h-100 overflow-auto">
 
                 <!-- <div class="list-group" id="listScrollspy">
                     <a href="#createProject" class="list-group-item list-group-item-action active">Create Project</a>
@@ -137,40 +182,65 @@
 
                             <a class="nav-link ml-4 my-1" href="#file-2-1-config-thymeleaf-md">2.1 Views</a>
 
+                            <!-- data-placement="right" -->
                             <a class="nav-link ml-4 my-1" href="#file-2-2-config-thymeleaf-md" data-toggle="tooltip"
-                                data-placement="right" data-html="true"
+                                data-html="true"
                                 data-original-title="Spring Standard Dialect<br>Views and View Resolvers">2.2
                                 Thymeleaf</a>
 
                             <a class="nav-link ml-4 my-1" href="#file-2-3-config-thymeleaf-md">2.3 Controller</a>
 
                             <a class="nav-link ml-4 my-1" href="#file-2-4-config-thymeleaf-md" data-toggle="tooltip"
-                                data-placement="right" data-html="true"
-                                data-original-title="@Controller<br>@RequestMapping">2.4
+                                data-html="true" data-original-title="@Controller<br>@RequestMapping">2.4
                                 DispatcherServlet</a>
 
                             <a class="nav-link ml-4 my-1" href="#file-2-5-config-thymeleaf-md">2.5 Run</a>
 
                         </nav>
 
-                        <a class="nav-link" href="#configSpringDataMirage">3. Spring Data Mirage</a>
+                        <a class="nav-link" href="#configSpringDataMirage">3. Config Spring Data Mirage</a>
                         <nav class="nav nav-pills flex-column">
 
-                            <a class="nav-link ml-4 my-1" href="#file-3-1-config-spring-data-mirage-md">3.1 Local Repository</a>
+                            <a class="nav-link ml-4 my-1" href="#file-3-1-config-spring-data-mirage-md">3.1 Local
+                                Repository</a>
 
-                            <a class="nav-link ml-4 my-1" href="#item-3-2">Item 3-2</a>
+                            <a class="nav-link ml-4 my-1" href="#file-3-2-config-spring-data-mirage-md">3.2 Log
+                                (Optional)</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-3-3-config-spring-data-mirage-md">3.3 Beans
+                                Configurations</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-3-4-config-spring-data-mirage-md">3.4
+                                Repository</a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-3-5-config-spring-data-mirage-md">3.5 </a>
+
                         </nav>
+
+                        <a class="nav-link" href="#configSpringSecurity">4. Config Spring Security</a>
+                        <nav class="nav nav-pills flex-column">
+
+                            <a class="nav-link ml-4 my-1" href="#file-4-1-config-spring-security-md">4.1 </a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-4-2-config-spring-security-md">4.2 </a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-4-3-config-spring-security-md">4.3 </a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-4-4-config-spring-security-md">4.4 </a>
+
+                            <a class="nav-link ml-4 my-1" href="#file-4-5-config-spring-security-md">4.5 </a>
+
+                        </nav>
+
                     </nav>
 
                 </nav>
 
-
-
             </div>
 
             <!-- overflow-auto -->
-            <div class="col h-100" style="overflow-y: scroll;" data-spy="scroll" data-target="#listScrollspy"
-                data-offset="100">
+            <div class="col h-100 overflow-auto" style="overflow-y: scroll;" data-spy="scroll"
+                data-target="#listScrollspy" data-offset="100">
 
                 <div id="createProject">
                     <script src="https://gist.github.com/letanloc1998/e0b20fdc0aa92bbfc7891782e9a44914.js"></script>
