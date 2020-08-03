@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNIT Task 2</title>
 
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -29,6 +31,40 @@
         .gist-meta a:first-child {
             display: block !important;
         } */
+
+        .custom-switch .custom-control-label::before {
+            top: 0rem !important;
+            height: 1.5rem !important;
+            /* 1 */
+            border-radius: .75rem !important;
+            /* 0.5 */
+            width: 2.625rem !important;
+            /* 1.75 */
+
+            left: -3.125rem !important;
+            /* -2.25 */
+        }
+
+        .custom-switch .custom-control-label::after {
+            top: calc(2px);
+            /* .25rem + 2px */
+            left: calc(-3.125rem + 2px);
+            /* -2.25rem + 2px */
+            width: calc(1.5rem - 4px);
+            /* 1rem - 4px */
+            height: calc(1.5rem - 4px);
+            /* 1rem - 4px */
+            border-radius: .75rem;
+            /* .5 */
+        }
+
+        .custom-switch .custom-control-input:checked~.custom-control-label::after {
+            background-color: #fff;
+            -webkit-transform: translateX(1.125rem);
+            /* .75 */
+            /* 2.625 - 1.5 */
+            transform: translateX(1.125rem);
+        }
 
         .tooltip::after {
             content: "";
@@ -104,7 +140,7 @@
             -ms-overflow-style: none;
         }
 
-        .noselect {
+        * {
             -webkit-touch-callout: none;
             /* iOS Safari */
             -webkit-user-select: none;
@@ -220,41 +256,43 @@
 
                             <a class="nav-link ml-4 my-1" href="#file-3-6-config-spring-data-mirage-md">3.6 Entity</a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-3-7-config-spring-data-mirage-md">3.7 Repository</a>
+                            <a class="nav-link ml-4 my-1" href="#file-3-7-config-spring-data-mirage-md">3.7
+                                Repository</a>
 
                             <a class="nav-link ml-4 my-1" href="#file-3-8-config-spring-data-mirage-md">3.8 Service</a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-3-9-config-spring-data-mirage-md">3.9 Controller</a>
+                            <a class="nav-link ml-4 my-1" href="#file-3-9-config-spring-data-mirage-md">3.9
+                                Controller</a>
 
                         </nav>
 
-                        <a class="nav-link" href="#configSpringSecurity">4. Display Data</a>
+                        <a class="nav-link" href="#configSpringSecurity">4. Config Spring Security</a>
                         <nav class="nav nav-pills flex-column">
 
-                            <a class="nav-link ml-4 my-1" href="#file-4-1-display-data-md">4.1 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-4-1-config-spring-security-md">4.1 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-4-2-display-data-md">4.2 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-4-2-config-spring-security-md">4.2 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-4-3-display-data-md">4.3 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-4-3-config-spring-security-md">4.3 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-4-4-display-data-md">4.4 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-4-4-config-spring-security-md">4.4 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-4-5-display-data-md">4.5 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-4-5-config-spring-security-md">4.5 </a>
 
                         </nav>
 
-                        <a class="nav-link" href="#configSpringSecurity">5. Config Spring Security</a>
+                        <a class="nav-link" href="#displayData">5. Display Data</a>
                         <nav class="nav nav-pills flex-column">
 
-                            <a class="nav-link ml-4 my-1" href="#file-5-1-config-spring-security-md">4.1 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-5-1-display-data-md">5.1 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-5-2-config-spring-security-md">4.2 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-5-2-display-data-md">5.2 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-5-3-config-spring-security-md">4.3 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-5-3-display-data-md">5.3 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-5-4-config-spring-security-md">4.4 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-5-4-display-data-md">5.4 </a>
 
-                            <a class="nav-link ml-4 my-1" href="#file-5-5-config-spring-security-md">4.5 </a>
+                            <a class="nav-link ml-4 my-1" href="#file-5-5-display-data-md">5.5 </a>
 
                         </nav>
 
@@ -277,6 +315,10 @@
                 </div>
 
                 <div id="configSpringDataMirage">
+                    <script src="https://gist.github.com/letanloc1998/6086d9f89f3e4e2f20868a0a260385ce.js"></script>
+                </div>
+
+                <div id="configSpringSecurity">
                     <script src="https://gist.github.com/letanloc1998/6086d9f89f3e4e2f20868a0a260385ce.js"></script>
                 </div>
 
