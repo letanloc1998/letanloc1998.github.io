@@ -8,7 +8,7 @@
 
   - []()
 
-    > 1+ years of experience as a Java back-end developer
+    > 1+ years of experience as a Java backend developer
 
 ## **Contacts**
 
@@ -18,7 +18,7 @@
 
   - ![https://letanloc1998.github.io/static/bootstrap/icon/1.5.0/telephone.svg](telephone.svg)
 
-    - `+8432723332`
+    - `+84 327 233 332`
 
   - ![https://letanloc1998.github.io/static/bootstrap/icon/1.5.0/envelope.svg](envelope.svg)
 
