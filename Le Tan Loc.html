@@ -62,6 +62,16 @@
         break-inside: avoid !important;
         break-inside: avoid !important;
       } */
+
+      .print-visible {
+        visibility: hidden;
+      }
+
+      @media print {
+        .print-visible {
+          visibility: visible;
+        }
+      }
     </style>
   </head>
 
@@ -637,6 +647,7 @@
           left: 0;
           right: 0;
         "
+        class="print-visible"
       >
         <hr />
 
