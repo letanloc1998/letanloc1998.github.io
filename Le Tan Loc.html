@@ -46,6 +46,8 @@
   <style>
     .markdown-body code {
       font-size: 16px;
+      /* font-kerning: normal; */
+      letter-spacing: -0.5px;
     }
 
   </style>
@@ -82,19 +84,20 @@
       @page {
         size: auto;
 
-        margin: 4mm 0 8mm 0;
+        margin: 4mm 0 4mm 0;
       }
 
       /* @page :first {
           margin: 0 0 8mm 0;
         } */
 
-      /* thead {
-          display: table-header-group;
-        }
-        tfoot {
-          display: table-footer-group;
-        } */
+      thead {
+        display: table-header-group;
+      }
+
+      tfoot {
+        display: table-footer-group;
+      }
 
       .print-content {
         margin-top: 24 !important;
@@ -105,12 +108,12 @@
       }
     }
 
-    /* .print-header,
-      .print-header-space,
-      .print-footer,
-      .print-footer-space {
-        height: 100px;
-      } */
+    .print-header,
+    .print-header-space,
+    .print-footer,
+    .print-footer-space {
+      min-height: 8px;
+    }
 
     .print-header {
       position: fixed;
@@ -136,7 +139,11 @@
     <thead>
       <tr>
         <td>
-          <div class="print-header-space">&nbsp;</div>
+          <div class="print-header-space" style="visibility: hidden;">
+            <div style="text-align: left; margin-left: 32px">
+              <a href="https://letanloc1998.github.io/">letanloc1998.github.io </a>
+            </div>
+          </div>
         </td>
       </tr>
     </thead>
@@ -537,9 +544,15 @@
                             <p>
                               <code class="language-plaintext highlighter-rouge">eRecruitment</code>
 
-                              - Manage workflow process recruitment
-                              candidate/applicant
+                              <!-- - Manage workflow process recruitment
+                              candidate/applicant -->
                             </p>
+
+                            <ul>
+                              <li>
+                                Manage workflow process recruitment candidate/applicant
+                              </li>
+                            </ul>
                           </li>
                         </ul>
                       </li>
@@ -740,7 +753,13 @@
     <tfoot>
       <tr>
         <td>
-          <div class="print-footer-space">&nbsp;</div>
+          <div class="print-footer-space" style="visibility: hidden;">
+            <hr />
+
+            <div dir="rtl" style="text-align: right; margin-right: 32px">
+              May 16th, 2021
+            </div>
+          </div>
         </td>
       </tr>
     </tfoot>
@@ -751,7 +770,7 @@
       <a href="https://letanloc1998.github.io/">letanloc1998.github.io </a>
     </div>
   </div>
-  <div class="print-footer print-visible" style="break-inside: avoid">
+  <div class="print-footer print-visible" style="break-inside: avoid;">
     <hr />
 
     <div dir="rtl" style="text-align: right; margin-right: 32px">
