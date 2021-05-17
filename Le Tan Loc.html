@@ -48,11 +48,33 @@
       font-size: 16px;
       /* font-kerning: normal; */
       letter-spacing: -0.5px;
+      word-spacing: -1px;
     }
 
   </style>
 
   <link rel="stylesheet" href="bs-style.css" />
+
+  <style>
+    /* X-Small devices (portrait phones, less than 576px) */
+    @media (max-width: 575.98px) {
+      .bs-container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      * {
+        letter-spacing: -0.5px;
+        /* word-spacing: -1px; */
+      }
+
+      .markdown-body code {
+        letter-spacing: -1px;
+        word-spacing: -2px;
+      }
+    }
+
+  </style>
 
   <style>
     #le-tan-loc {
@@ -506,8 +528,14 @@
                             <p>
                               <code class="language-plaintext highlighter-rouge">Web Application Firewall</code>
 
-                              - Detect and classify attack
+                              <!-- - Detect and classify attack -->
                             </p>
+
+                            <ul>
+                              <li>
+                                Detect and classify attack
+                              </li>
+                            </ul>
                           </li>
                         </ul>
                       </li>
@@ -531,6 +559,12 @@
                               <code class="language-plaintext highlighter-rouge">eP2P</code>
                               - Purchase to Payment
                             </p>
+
+                            <ul>
+                              <li>
+                                Manage purchase, payment, budget,...
+                              </li>
+                            </ul>
                           </li>
 
                           <li>
