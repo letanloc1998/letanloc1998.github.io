@@ -122,7 +122,7 @@
 
       - `Solve math on pocket calculator` (6th)
 
-      - `Chemistry` (3th)
+      - `Chemistry` (3rd)
 
     - Excellent level of school
 
