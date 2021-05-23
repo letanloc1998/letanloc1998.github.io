@@ -168,6 +168,10 @@
       visibility: hidden;
     }
 
+    .print-display {
+      display: none;
+    }
+
     @media print {
       @page {
         size: auto;
@@ -200,6 +204,14 @@
 
       .print-visible {
         visibility: visible;
+      }
+
+      .print-display-none {
+        display: none;
+      }
+
+      .print-display {
+        display: block;
       }
     }
 
@@ -463,7 +475,7 @@
                     <strong>Education</strong>
                   </h2>
 
-                  <ul>
+                  <ul class="print-display-none">
                     <li>
                       <p>Aug 2016 - Sep 2020</p>
 
@@ -526,11 +538,69 @@
                     </li>
                   </ul>
 
+                  <ul class="print-display">
+                    <li>
+                      <p>
+                        <a href="https://www.ctu.edu.vn/">
+                          <code class="language-plaintext highlighter-rouge">Can Tho University</code>
+                        </a>
+
+                        <span style="float: right;">Aug 2016 - Sep 2020</span>
+                      </p>
+
+                      <ul>
+                        <li>
+                          <p>
+                            Software Engineering
+                          </p>
+
+                          <ul>
+                            <li>
+                              <p>
+                                GPA:
+
+                                <code class="language-plaintext highlighter-rouge">3.71/4.00</code>
+                              </p>
+                            </li>
+
+                            <li>
+                              <p>
+                                Classification:
+
+                                <code class="language-plaintext highlighter-rouge">Excellent</code>
+                              </p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <p>
+                        <a href="https://www.cusc.vn/">
+                          <code class="language-plaintext highlighter-rouge">Can Tho University Software
+                            Center</code>
+                        </a>
+
+                        - CUSC
+                        <span style="float: right;">Aug 2018 - Sep 2018</span>
+                      </p>
+
+                      <ul>
+                        <li>
+                          <p>
+                            Android application development
+                          </p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
                   <h2 id="experience">
                     <strong>Experience</strong>
                   </h2>
 
-                  <ul>
+                  <ul class="print-display-none">
                     <li>
                       <p>May 2019 - Oct 2019</p>
 
@@ -587,6 +657,72 @@
                           <a href="https://unit.com.vn/">
                             <code class="language-plaintext highlighter-rouge">UNIT Corp</code>
                           </a>
+
+                          <!--
+                          - Junior Java Developer
+
+                          <ul>
+                            <li>
+                              <p translate="no">Spring MVC, Spring Boot</p>
+                            </li>
+                          </ul>
+                          -->
+
+                          <span translate="no">- Spring MVC, Spring Boot</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="print-display">
+                    <li>
+                      <p>
+                        <a href="http://appcore.com.vn/">
+                          <code class="language-plaintext highlighter-rouge">AppCore</code>
+                        </a>
+
+                        <span style="float: right;">May 2019 - Oct 2019</span>
+                      </p>
+
+                      <ul>
+                        <li style="margin-right: -12px;">
+                          <span translate="no">- Python (Django, Django REST framework)</span>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <p>
+                        <a href="https://vnptit.vn/">
+                          <code class="language-plaintext highlighter-rouge">VNPT IT</code>
+                        </a>
+
+                        <span style="float: right;">Mar 2020 - Apr 2020</span>
+                      </p>
+
+                      <ul>
+                        <li>
+                          <a href="https://vnptit.vn/">
+                            <code class="language-plaintext highlighter-rouge">VNPT IT</code>
+                          </a>
+
+                          <span translate="no">- Spring Boot (JHipster)</span>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <p>
+                        <a href="https://unit.com.vn/">
+                          <code class="language-plaintext highlighter-rouge">UNIT Corp</code>
+                        </a>
+
+                        <span style="float: right;">Jul 2020 - present</span>
+                      </p>
+
+                      <ul>
+                        <li>
+
 
                           <!--
                           - Junior Java Developer
@@ -882,7 +1018,7 @@
               <!-- <hr /> -->
               <div style="page-break-after: always;"></div>
 
-              <div class=" bs-row" style="break-inside: avoid;">
+              <div class="bs-row" style="break-inside: avoid;">
                 <div class="bs-col-12">
                   <h2 id="attachments">
                     <strong>Attachments</strong>
