@@ -58,6 +58,12 @@
   <style>
     .markdown-body.print-content {
       margin-top: -8px !important;
+      margin-bottom: 0px !important;
+    }
+
+    .markdown-body.print-appendix {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
     }
 
     /* X-Small devices (portrait phones, less than 576px) */
@@ -126,6 +132,10 @@
       }
     }
 
+    .print-md-display {
+      display: none;
+    }
+
     /* X-Large devices (large desktops, 1200px and up) */
     @media (min-width: 768px) {
       * {
@@ -137,6 +147,16 @@
         font-size: 16px;
         letter-spacing: 0px !important;
         word-spacing: -1px !important;
+      }
+
+      @media print {
+        .print-md-display-none {
+          display: none;
+        }
+
+        .print-md-display {
+          display: block;
+        }
       }
     }
 
@@ -191,11 +211,11 @@
         } */
 
       thead {
-        display: table-header-group;
+        display: table-header-group !important;
       }
 
       tfoot {
-        display: table-footer-group;
+        display: table-footer-group !important;
       }
 
       /* .print-content {
@@ -212,6 +232,10 @@
 
       .print-display {
         display: block;
+      }
+
+      .markdown-body.print-appendix {
+        margin-top: -32px !important;
       }
     }
 
@@ -242,7 +266,7 @@
 </head>
 
 <body>
-  <table style="width: 100%">
+  <table style="width: 100%;">
     <thead>
       <tr>
         <td>
@@ -254,6 +278,7 @@
         </td>
       </tr>
     </thead>
+
     <tbody>
       <tr>
         <td>
@@ -475,7 +500,7 @@
                     <strong>Education</strong>
                   </h2>
 
-                  <ul class="print-display-none">
+                  <ul class="print-md-display-none">
                     <li>
                       <p>Aug 2016 - Sep 2020</p>
 
@@ -538,7 +563,7 @@
                     </li>
                   </ul>
 
-                  <ul class="print-display">
+                  <ul class="print-md-display">
                     <li>
                       <p>
                         <a href="https://www.ctu.edu.vn/">
@@ -600,7 +625,7 @@
                     <strong>Experience</strong>
                   </h2>
 
-                  <ul class="print-display-none">
+                  <ul class="print-md-display-none">
                     <li>
                       <p>May 2019 - Oct 2019</p>
 
@@ -674,7 +699,7 @@
                     </li>
                   </ul>
 
-                  <ul class="print-display">
+                  <ul class="print-md-display">
                     <li>
                       <p>
                         <a href="http://appcore.com.vn/">
@@ -886,42 +911,6 @@
                   </div>
 
                   <div style="break-inside: avoid">
-                    <h2 id="skills">
-                      <strong>Skills</strong>
-                    </h2>
-
-                    <ul>
-                      <li>
-                        <p>
-                          <code class="language-plaintext highlighter-rouge">Java</code>,
-
-                          <code class="language-plaintext highlighter-rouge">Spring MVC</code>,
-
-                          <code class="language-plaintext highlighter-rouge">Spring Boot</code>
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          <code class="language-plaintext highlighter-rouge">Python</code>,
-
-                          <code class="language-plaintext highlighter-rouge">Django</code>,
-
-                          <code class="language-plaintext highlighter-rouge">Django REST Framework</code>
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          <code class="language-plaintext highlighter-rouge">ReactJS</code>,
-
-                          <code class="language-plaintext highlighter-rouge">Android - Java</code>
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div style="break-inside: avoid">
                     <h2 id="honors--awards">
                       <strong>Honors &amp; Awards</strong>
                     </h2>
@@ -1012,6 +1001,50 @@
                       </li>
                     </ul>
                   </div>
+
+                  <div style="break-inside: avoid">
+                    <h2 id="skills">
+                      <strong>Skills</strong>
+                    </h2>
+
+                    <ul>
+                      <li>
+                        <p>
+                          <code class="language-plaintext highlighter-rouge">Java</code>,
+
+                          <code class="language-plaintext highlighter-rouge">Spring MVC</code>,
+
+                          <code class="language-plaintext highlighter-rouge">Spring Boot</code>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div style="break-inside: avoid">
+                    <h2 id="orther">
+                      <strong>Other</strong>
+                    </h2>
+
+                    <ul>
+                      <li>
+                        <p>
+                          <code class="language-plaintext highlighter-rouge">Python</code>,
+
+                          <code class="language-plaintext highlighter-rouge">Django</code>,
+
+                          <code class="language-plaintext highlighter-rouge">Django REST Framework</code>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          <code class="language-plaintext highlighter-rouge">ReactJS</code>,
+
+                          <code class="language-plaintext highlighter-rouge">Android</code>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1019,14 +1052,15 @@
         </td>
       </tr>
     </tbody>
-    <tfoot class="print-display">
+
+    <tfoot style="display: none;">
       <tr>
         <td>
           <div class="print-footer-space" style="visibility: hidden;">
             <hr />
 
             <div dir="rtl" style="text-align: right; margin-right: 32px">
-              May 16th, 2021
+              May 23th, 2021
             </div>
           </div>
         </td>
@@ -1037,7 +1071,7 @@
   <div style="page-break-after: always;"></div>
 
   <table style="width: 100%">
-    <thead class="print-display">
+    <thead style="display: none;">
       <tr>
         <td>
           <div class="print-header-space" style="visibility: hidden; margin-bottom: 40px;">
@@ -1048,12 +1082,12 @@
         </td>
       </tr>
     </thead>
+
     <tbody>
       <tr>
         <td>
-          <!-- <div class="print-content">...</div> -->
 
-          <div class="container-lg px-3 my-5 markdown-body print-content">
+          <div class="container-lg px-3 my-5 markdown-body print-appendix">
 
             <div class="bs-container-fluid">
 
@@ -1072,6 +1106,7 @@
         </td>
       </tr>
     </tbody>
+
     <tfoot>
       <tr>
         <td>
@@ -1079,7 +1114,7 @@
             <hr />
 
             <div dir="rtl" style="text-align: right; margin-right: 32px">
-              May 16th, 2021
+              May 23th, 2021
             </div>
           </div>
         </td>
@@ -1096,7 +1131,7 @@
     <hr />
 
     <div dir="rtl" style="text-align: right; margin-right: 32px">
-      May 16th, 2021
+      May 23th, 2021
     </div>
   </div>
 
