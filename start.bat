@@ -8,5 +8,9 @@
 @REM the directory where the batch file is located
 cd %~p0
 
+netstat -ano | findstr :8000
+
+@REM taskkill /PID <yourid> /F
+
 @REM python -m http.server 8000 --bind 127.0.0.1
 python -m http.server 8000
