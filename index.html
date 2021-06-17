@@ -177,6 +177,38 @@
       }
     }
 
+    @media print and (min-width: 15cm) and (max-width: 22cm) {
+      .print-header-space {
+        margin-bottom: 32px !important;
+      }
+
+      h1 {
+        /* 2em */
+        font-size: 1.8em !important;
+      }
+
+      h2 {
+        /* 1.5em */
+        font-size: 1.35em !important;
+      }
+
+      p,
+      p * {
+        /* 16px */
+        font-size: 14.4px !important;
+      }
+
+      code {
+        /* 16px */
+        font-size: 14.4px !important;
+      }
+
+      body {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+      }
+    }
+
   </style>
 
   <style>
@@ -316,7 +348,7 @@
     <thead>
       <tr>
         <td>
-          <div class="print-header-space" style="visibility: hidden; margin-bottom: 40px;">
+          <div class="print-header-space" style="visibility: hidden; margin-bottom: 32px;">
             <div style="text-align: left; margin-left: 32px">
               <a href="https://letanloc1998.github.io/">letanloc1998.github.io </a>
             </div>
