@@ -319,21 +319,26 @@
 
   <link rel="stylesheet" href="scrollbar.css" />
 
-  <script>
-    const replaceScript = (url) => {
-      let currentScript = document.currentScript;
-      fetch(url, { cache: "default" })
-        .then((response) => {
-          // console.log('response', response);
-          return response.text();
-        })
-        .then((data) => {
-          // console.log("data", data);
-          let parser = new DOMParser();
-          let dom = parser.parseFromString(data, "text/html");
-          currentScript.outerHTML = dom.body.innerHTML;
-        });
+  <script defer>
+
+    window.onload = function () {
+      [...document.getElementsByClassName("replace-content")].forEach(
+        (element, index, array) => {
+          let url = element.getAttribute("url");
+
+          fetch(url, { cache: "default" })
+            .then((response) => {
+              return response.text();
+            })
+            .then((data) => {
+              let parser = new DOMParser();
+              let dom = parser.parseFromString(data, "text/html");
+              element.innerHTML = dom.body.innerHTML;
+            });
+        }
+      )
     };
+
   </script>
 
   <link rel="canonical" href="https://letanloc1998.github.io/" />
@@ -362,67 +367,46 @@
         <td>
           <div class="container-lg px-3 my-5 markdown-body print-content">
 
-            <script>
-              replaceScript("letanloc.html");
-            </script>
+            <div class="replace-content" url="letanloc.html"></div>
 
             <div class="bs-container-fluid">
               <div class="bs-row">
                 <div class="bs-col-sm-4" style="break-inside: avoid">
 
                   <!-- Contacts -->
-                  <script>
-                    replaceScript("contacts.html");
-                  </script>
+                  <div class="replace-content" url="contacts.html"></div>
 
                   <!-- Information -->
-                  <script>
-                    replaceScript("information.html");
-                  </script>
+                  <div class="replace-content" url="information.html"></div>
 
                 </div>
 
                 <div class="bs-col-sm-8" style="break-inside: avoid">
 
                   <!-- Summary -->
-                  <script>
-                    replaceScript("summary.html");
-                  </script>
+                  <div class="replace-content" url="summary.html"></div>
 
                   <!-- Education -->
-                  <script>
-                    replaceScript("education.html");
-                  </script>
+                  <div class="replace-content" url="education.html"></div>
 
                   <!-- Experience -->
-                  <script>
-                    replaceScript("experience.html");
-                  </script>
+                  <div class="replace-content" url="experience.html"></div>
 
                   <!-- Projects -->
-                  <script>
-                    replaceScript("projects.html");
-                  </script>
+                  <div class="replace-content" url="projects.html"></div>
 
                   <!-- Certifications -->
-                  <script>
-                    replaceScript("certifications.html");
-                  </script>
+                  <div class="replace-content" url="certifications.html"></div>
 
                   <!-- Honors & Awards -->
-                  <script>
-                    replaceScript("honors-and-awards.html");
-                  </script>
+                  <div class="replace-content" url="honors-and-awards.html"></div>
 
                   <!-- Skills -->
-                  <script>
-                    replaceScript("skills.html");
-                  </script>
+                  <div class="replace-content" url="skills.html"></div>
 
                   <!-- Other -->
-                  <script>
-                    replaceScript("other.html");
-                  </script>
+                  <div class="replace-content" url="other.html"></div>
+
                 </div>
               </div>
             </div>
@@ -473,9 +457,7 @@
                 <div class="bs-col-12">
 
                   <!-- Additional information -->
-                  <script>
-                    replaceScript("additional-information.html");
-                  </script>
+                  <div class="replace-content" url="additional-information.html"></div>
 
                   <!--  -->
                   <div style="break-inside: avoid">
