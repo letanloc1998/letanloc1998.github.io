@@ -203,7 +203,9 @@
         font-size: 14.4px !important;
       }
 
-      body {
+      body,
+      .print-header,
+      .print-footer {
         margin-left: 16px !important;
         margin-right: 16px !important;
       }
@@ -244,20 +246,8 @@
     @media print {
       @page {
         size: auto;
-
-        margin: 4mm 0 4mm 0;
-
+        margin: 0;
       }
-
-      /* @page {
-        @bottom-left {
-          content: counter(page) "/"counter(pages);
-        }
-      } */
-
-      /* @page :first {
-          margin: 0 0 8mm 0;
-        } */
 
       thead {
         display: table-header-group !important;
@@ -503,19 +493,38 @@
   </table>
 
   <div class="print-header print-visible" style="break-inside: avoid">
-    <div style="text-align: left; margin-left: 32px">
-      <a href="https://letanloc1998.github.io/">letanloc1998.github.io </a>
+    <div class="container-lg px-3 my-5 markdown-body print-content" style="margin-top: 16px !important;">
+      <div class="bs-container-fluid">
+        <div class="bs-row">
+          <div class="bs-col-sm-12">
+            <div style="text-align: left;">
+              <a href="https://letanloc1998.github.io/">letanloc1998.github.io </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="print-footer print-visible" style="break-inside: avoid;">
     <hr />
 
-    <div dir="rtl" style="text-align: right; margin-right: 32px">
-      May 25th, 2021
+    <div class="container-lg px-3 my-5 markdown-body print-content"
+      style="margin-top: 0 !important; margin-bottom: 16px !important;">
+      <div class="bs-container-fluid">
+        <div class="bs-row">
+          <div class="bs-col-sm-12">
+            <div dir="rtl" style="text-align: right;">
+              May 25th, 2021
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script src="anchor-js/4.1.0/anchor.min.js"></script>
+  <script src=" anchor-js/4.1.0/anchor.min.js">
+  </script>
 
   <script>
     anchors.add();
