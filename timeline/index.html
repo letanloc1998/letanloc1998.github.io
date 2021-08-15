@@ -35,12 +35,50 @@
             margin: 0px !important;
             box-sizing: border-box !important;
             width: fit-content;
-
-            background-color: #f7f7f7;
         }
 
-        td:hover {
+        /* td:hover {
             background-color: yellow;
+        } */
+
+        td,
+        th {
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+
+        .bg-lynx-white {
+            background-color: #f7f7f7 !important;
+        }
+
+        .bg-hawkes-blue {
+            background-color: #cfe2ff !important;
+        }
+
+        .border-left-none {
+            border-left: none !important;
+        }
+
+        .border-right-none {
+            border-right: none !important;
+        }
+
+        .border-x-none {
+            border-left: none !important;
+            border-right: none !important;
+        }
+
+        .border-top-none {
+            border-top: none !important;
+        }
+
+        .border-bottom-none {
+            border-bottom: none !important;
+        }
+
+        .border-y-none {
+            border-top: none !important;
+            border-bottom: none !important;
         }
 
     </style>
@@ -52,21 +90,21 @@
     <!-- table-sm -->
     <!-- table-hover -->
     <!-- border-primary -->
-    <table class="table table-bordered">
+    <table class="table table-bordered border-primary" style="border-color: #0d6efd !important;">
         <thead>
             <tr>
-                <th scope="col"></th>
-                <th scope="col" colspan="12" class="text-center">2016</th>
-                <th scope="col" colspan="12" class="text-center">2017</th>
-                <th scope="col" colspan="12" class="text-center">2018</th>
-                <th scope="col" colspan="12" class="text-center">2019</th>
-                <th scope="col" colspan="12" class="text-center">2020</th>
-                <th scope="col" colspan="12" class="text-center">2021</th>
+                <th scope="col">Year</th>
+                <th scope="col" colspan="12">2016</th>
+                <th scope="col" colspan="12">2017</th>
+                <th scope="col" colspan="12">2018</th>
+                <th scope="col" colspan="12">2019</th>
+                <th scope="col" colspan="12">2020</th>
+                <th scope="col" colspan="12">2021</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row" rowspan="2" class="text-center align-middle">Education</th>
+                <th scope="row">Month</th>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -75,8 +113,46 @@
                 <td>6</td>
                 <td>7</td>
                 <td>8</td>
-                <td colspan="37" class="text-center">Can Tho University</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
 
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
                 <td>10</td>
                 <td>11</td>
                 <td>12</td>
@@ -107,85 +183,20 @@
                 <td>11</td>
                 <td>12</td>
             </tr>
-            <tr>
+            <tr class="border-bottom-none">
+                <th scope="row" rowspan="2">Education</th>
+                <td colspan="8" class="bg-lynx-white border-right-none"></td>
+                <td colspan="37" class="bg-hawkes-blue border-x-none">Can Tho University</td>
+
+                <td colspan="27" class="bg-lynx-white border-left-none"></td>
+            </tr>
+            <tr class="border-top-none">
                 <!-- <th scope="row">2</th> -->
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
+                <td colspan="31" class="bg-lynx-white border-right-none"></td>
 
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
+                <td colspan="2" class="bg-hawkes-blue border-x-none">CUSC</td>
 
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
+                <td colspan="39" class="bg-lynx-white border-left-none"></td>
             </tr>
             <tr>
                 <th scope="row"></th>
